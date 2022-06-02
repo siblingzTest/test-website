@@ -1,0 +1,54 @@
+@use '../custom' as *;
+@use '../components/typography' as *;
+
+
+#story-section {
+    top: 0;
+    left: 0;
+    right: 0;
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 10em 0 1em 0em;
+    // padding: 160px 0 480px 0;
+    z-index: 30;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // background-color: black;
+    font-family: 'Orbitron', sans-serif;
+    color:$white;
+
+
+    h1 {
+        width: 100%;
+        padding: 1em 0 1em 0;
+        font-size: $title-font;
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;  
+
+    }
+
+}
+
+
+.welcome-btn {
+    height: 3em;
+    width: 8em;
+    font-size: 3rem;
+    padding: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.story-btn {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30em;
+}

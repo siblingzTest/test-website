@@ -1,0 +1,26 @@
+@use '../custom' as *;
+@use '../components/typography' as *;
+
+
+#footer-section {
+
+    width: 100%;
+    height:10em; /* 내용물에 따라 알맞는 값 설정 */
+    bottom: 0;
+    position: absolute;
+    text-align: center;
+    background: #1d0747;
+    color: $white;
+    background-color: red;
+    z-index: 30;
+
+
+}
+
+.footer-container {
+
+
+    font-size: 0.9rem;
+    color: $white;
+
+}

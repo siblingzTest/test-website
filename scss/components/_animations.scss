@@ -1,0 +1,72 @@
+@use '../custom' as *;
+@use '../components/typography' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+}
+
+
+// .spaceship-animation {
+//     height: 100vh;
+//     width: 100vw;
+//     z-index: 9000;
+//     position: absolute;
+//     // overflow: hidden;
+
+
+// }
+
+
+.team-spaceship {
+    
+
+    position: absolute;
+    top: 0;
+    left: -350px;
+    // top: 30%;
+    // left: 0%;
+    height: 10em;
+    z-index: 9000;
+    text-align: center;
+    animation: heartbeat infinite ease-in-out;
+    scroll-behavior: smooth;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+     
+
+
+
+}
+
+@keyframes floatingUp {
+    0% { transform: none; }
+    50%  { transform: translate(0, 10px); }
+    100% { transform: none; }  
+}
+
+@keyframes heartbeat {
+    0% { 
+      transform: translate(-50%, -50%) scale(1); 
+    }
+    50% { 
+      transform: translate(-50%, -50%) scale(1.5); 
+    }
+    100% { 
+      transform: translate(-50%, -50%) scale(1); 
+    }
+  
+  }
+  
+  body:hover.team-spaceship{
+  
+    animation: heartbeat 2s infinite;  
+  }
+
+  

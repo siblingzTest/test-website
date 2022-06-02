@@ -1,0 +1,207 @@
+@use '../custom' as *;
+@use '../components/typography' as *;
+
+
+
+#welcome-container {
+    position:relative;
+    width: 100%;
+    height: 100vh;
+    padding: 6em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+
+    // gradation between #welcome container and home-intro
+    &::before{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 100px;
+        background: linear-gradient(to top, #1d0747, transparent);
+        z-index: 1000;
+    }
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        pointer-events: none;
+    }
+
+    img.main-planet {
+        mix-blend-mode: screen;
+        animation: floatingDown 5s ease-in-out infinite;
+        z-index: 9;
+        }
+
+    img.main-back--left,
+    img.main-back--right {
+        animation: floatingUp 4s ease-in-out infinite;
+        padding-bottom: 6em;
+        @media (max-width: 62em) {
+            display: none;
+        }
+    }    
+
+    img.main-front {
+        z-index: 10;
+        bottom:0;
+        margin-top: 5em;
+    }
+
+}
+
+
+@keyframes floatingUp {
+    0% { transform: none; }
+    50%  { transform: translate(0, 10px); }
+    100% { transform: none; }  
+}
+
+@keyframes floatingDown {
+    0% { transform: none; }
+    50%  { transform: translate(0, -10px)  }
+    100% { transform: none; }  
+}
+
+@keyframes movingStars {
+    0%,20%,40%,60%,80%, 100% {
+        opacity: 0;
+     
+    }
+    
+    10%,30%,50%,70%,90% {
+        opacity: 1;
+   
+    }
+    
+}
+
+@keyframes movingBackground {
+      0% {
+          transform: scale(1);
+        
+      }
+      100% {
+          transform: scale(2);
+      }
+      
+  }  
+
+
+.stars-img {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    animation-delay: 0s;
+    pointer-events: none;
+    animation: movingStars 100s ease-in infinite,
+    movingBackground 18s linear infinite;
+
+}
+
+
+#welcome-text {
+    position: absolute;
+    color: #fff;
+    white-space: nowrap;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 8rem;
+    z-index: 9;
+    text-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    margin-bottom: 0.7em;
+    font-weight:800;
+}
+
+.welcome-btn {
+
+    
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    width: 9em;
+    height: 2.2em;
+    margin: 0 1em;
+    border-style: none;
+    padding: 8px 30px;
+    background-color: $white;
+    border: solid 5px #1d0747;
+    color: #2b1055;
+    font-size: 1.5em;
+    font-weight: 900;
+    transform: translateY(100px);
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    text-transform: uppercase;
+    letter-spacing: .15rem;
+	transition: all 0.3s;
+	position: relative;
+	overflow: hidden;
+	z-index: 9;
+    text-align: center;
+    
+    &:hover {
+        background-color: #1d0747;
+        color: #fff;
+    }
+  
+    &:before {
+        content: "";
+        background-color: #fff;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 1.6rem;
+        position: absolute;
+        transform: translateX(-80%) rotate(45deg);
+        transition: all 0.3s;
+    }
+
+    &:hover::before {
+        transform: translateX(100%) rotate(45deg);
+
+    }
+    
+
+}
+
+  
+  
+#home-intro {
+      position: relative;
+      padding: 100px;
+      background: #1d0747;
+      z-index: 20;
+      font-family: 'Poppins', sans-serif;
+
+      h2 {
+        font-size: $title-font;
+        margin: 100px 0;
+        color: #fff;
+        font-weight: 600;
+        text-align: center;
+      }
+
+      p {
+        font-size: 1.3rem;
+        margin: 20px 0;
+        color: #fff;
+        line-height: 40px;
+      }
+  
+}
+  
+    
+.wave-down {
+    position: absolute;
+    margin-top: 0;
+    z-index: 22;
+}
+
