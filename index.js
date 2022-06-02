@@ -4,8 +4,8 @@ let mainPlanet = document.querySelector(".main-planet");
 let bgBackLeft = document.querySelector(".main-back-left");
 let bgBackRight = document.querySelector(".main-back-right");
 let bgText = document.querySelector(".welcome-text");
-let bgBtnLeft = document.querySelector(".welcome-btn-left");
-let bgBtnRight = document.querySelector(".welcome-btn-right");
+// let bgBtnLeft = document.querySelector(".welcome-btn-left");
+// let bgBtnRight = document.querySelector(".welcome-btn-right");
 let bgFront = document.querySelector(".main-front");
 
 window.addEventListener("scroll", function(){
@@ -16,8 +16,8 @@ window.addEventListener("scroll", function(){
   bgBackRight.style.top = value * 0.5 + "px";
   bgFront.style.top = value * 0 + "px";
   bgText.style.top = value * 1.5 + "px";
-  bgBtnLeft.style.right = value * 1.5 + "px";
-  bgBtnRight.style.marginRight = value * 1.5 + "px";
+  // bgBtnLeft.style.right = value * 1.5 + "px";
+  // bgBtnRight.style.marginRight = value * 1.5 + "px";
 
 })
 
